@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of https://lessonleap.com/.well-known/*
+host: https://lessonleap.com
+found: false
+note: >-
+  Every probed path returns HTTP 200 with Content-Type text/html — the site is a
+  single-page acquisition notice ("LessonLeap has been acquired by Preply") that
+  serves the same HTML shell for all routes. These are catch-all false positives,
+  NOT published discovery documents. No .well-known document was captured and no
+  WellKnown/SecurityTxt pointer is wired in apis.yml.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  content_type: text/html
+  document: false
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: text/html
+  document: false
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: text/html
+  document: false
+- path: /.well-known/api-catalog
+  status: 200
+  content_type: text/html
+  document: false
+- path: /.well-known/ai-plugin.json
+  status: 200
+  content_type: text/html
+  document: false
+- path: /llms.txt
+  status: 200
+  content_type: text/html
+  document: false
